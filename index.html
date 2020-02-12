@@ -6,14 +6,29 @@
         margin: 0;
         padding: 0;
     }
-    .imgbox {
-        display: grid;
-        height: 100%;
+    .logo {
+        width: 100%;
+        text-align: center;
     }
-    .center-fit {
-        max-width: 100%;
-        max-height: 100vh;
-        margin: auto;
+    .logo img {
+        margin: 20px auto;
+        max-width: 140px;
+    }
+    .background {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center; 
+        z-index: -1;
+    }
+    .background video {
+        width: 100%;
+        max-width: 1000px;
+        margin: 40px;
     }
 </style>
 </style>
@@ -22,8 +37,12 @@
 </script>
 </head>
 <body>
-<div class="imgbox">
-    <img class="center-fit" src="homepage.jpg">
+<div class="logo">
+    <img class="center-fit" src="logo.png">
+</div>
+
+<div class="background">
+    <video src="/home.mp4" autoplay loop></video>
 </div>
 </body>
 </html>
